@@ -2,7 +2,11 @@
   "devDependencies": {
     "tailwindcss": "^3.4.14"
   },
-"scripts": {
-  "start": "npx tailwindcss -i ./src/css/input.css -o ./src/css/output.css --watch"
-}
+  "scripts": {
+    "start": "npx tailwindcss -i ./src/css/input.css -o ./src/css/output.css --watch"
+  },
+  "dependencies": {
+    "flowbite": "^2.5.2",
+    "swiper": "^11.1.14"
+  }
 }
