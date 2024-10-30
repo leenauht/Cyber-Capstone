@@ -158,6 +158,7 @@
   opacity: 0;
   transition: all 0.5s linear;
   visibility: hidden;
+  z-index: 1000;
 }
 .cd-top--is-visible {
   visibility: visible;
