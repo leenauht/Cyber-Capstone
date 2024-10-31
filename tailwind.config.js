@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       maxWidth: {
-        "w-425": "425px",
+        "w-430": "430px",
         "w-1207": "1207px",
         "w-1235": "1235px",
         "w-1280": "1280px",
@@ -23,7 +23,7 @@ module.exports = {
       padding: {
         30: "30px",
         50: "50px",
-        60: "60px",
+        "60px": "60px",
         70: "70px",
         100: "100px",
         120: "120px",

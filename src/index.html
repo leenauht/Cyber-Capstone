@@ -29,8 +29,501 @@
     />
 
     <link rel="stylesheet" href="./css/output.css" />
+    
   </head>
-  <body class="font_size">
+  <body>
+    <!-- thanh Tuan -->
+    <header class="fixed left-0 top-0 z-[9999] w-full py-6 text-[17px] bg-white" x-data="{ open: false }">
+      <div class="relative mx-auto max-w-[1390px] items-center px-4 md:px-8 xl:flex 2xl:px-0 flex">
+        <!-- Logo -->
+        <div class="flex w-full items-center justify-between xl:w-1/4">
+          <a href="#">
+            <img src="https://solid.nextjstemplates.com/images/logo/logo-light.svg" alt="Solid logo">
+          </a>
+        </div>
+  
+        <div class="flex items-center justify-between w-full">
+          <!-- Desktop Links -->
+          <nav class="hidden md:flex space-x-8 text-gray-600">
+            <a href="#" class="hover:text-blue-600">Home</a>
+            <a href="#" class="hover:text-blue-600">Features</a>
+            <a href="#" class="hover:text-blue-600">Blog</a>
+            <a href="#" class="hover:text-blue-600">Docs</a>
+            <a href="#" class="hover:text-blue-600">Pages</a>
+            <a href="#" class="hover:text-blue-600">Support</a>
+          </nav>
+  
+          <!-- Right Side Icons -->
+          <div class="hidden md:flex items-center space-x-6">
+            <button class="hover:text-blue-600">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="m21 21-5.197-5.197m0 0A8 8 0 1 0 5.196 5.196a8 8 0 0 0 10.607 10.607Z" />
+              </svg>
+            </button>
+            <button class="hover:text-blue-600">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
+              </svg>
+  
+            </button>
+            <a href="#" class="hover:text-blue-600">Sign In</a>
+            <a href="#" class="bg-[#0063ec] text-white px-8 py-3 rounded-3xl inline-block">Sign Up</a>
+          </div>
+        </div>
+  
+        <!-- Mobile Menu Button -->
+        <button class="md:hidden flex items-center text-gray-600" @click="open = !open">
+          <svg x-show="!open" class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+          </svg>
+          <svg x-show="open" class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+  
+      <!-- Mobile Menu -->
+      <div x-show="open" @click.away="open = false" class="md:hidden bg-white shadow-lg rounded-b-lg mt-2">
+        <div class="px-4 py-6 space-y-4">
+          <a href="#" class="block text-gray-700 hover:text-blue-600">Home</a>
+          <a href="#" class="block text-gray-700 hover:text-blue-600">Features</a>
+          <a href="#" class="block text-gray-700 hover:text-blue-600">Blog</a>
+          <a href="#" class="block text-gray-700 hover:text-blue-600">Docs</a>
+          <a href="#" class="block text-gray-700 hover:text-blue-600">Pages</a>
+          <a href="#" class="block text-gray-700 hover:text-blue-600">Support</a>
+        </div>
+      </div>
+    </header>
+  
+    <main>
+      <section class="overflow-hidden pb-20 pt-32 md:pt-40 xl:pb-24 xl:pt-44">
+        <div class="mx-auto max-w-[1390px] px-4 md:px-8 2xl:px-0">
+          <div class="flex lg:items-center lg:gap-8 xl:gap-32">
+            <div class=" md:w-1/2">
+              <h4 class="mb-4 text-lg font-medium text-black">🔥 Solid - A Complete SaaS Starter
+                Template for SaaS</h4>
+              <h1 class="mb-5 pr-16 text-3xl font-bold text-black xl:text-5xl">Robust SaaS Boilerplate
+                and Starter for<span
+                  class="relative ml-2 inline-block before:absolute before:bottom-[1px] before:left-0 before:-z-[1] before:h-3 before:w-full before:bg-[#adfff8]">Next.js</span>
+              </h1>
+              <p class="text-[#757693] text-lg">Packed with all the key integrations you need for swift SaaS startup
+                launch,
+                including - Authentication,
+                Database, Sanity Blog, Essential UI Components, Business Pages and More. Built-winth - Next.js, React 18
+                and TypeScript.</p>
+              <div class="mt-10"><a aria-label="get started button"
+                  class="inline-block rounded-full bg-black px-7 py-3 text-white duration-300 ease-in-out" href="#">Get
+                  Started</a></div>
+            </div>
+            <div class="hidden md:w-1/2 lg:block">
+              <div class="relative 2xl:-mr-7">
+                <img alt="shape" width="46" height="246" class="absolute -left-11 top-0" style="color:transparent"
+                  src="https://solid.nextjstemplates.com/_next/image?url=%2Fimages%2Fshape%2Fshape-01.png&w=48&q=75">
+                <img alt="shape" width="37" height="37" class="absolute bottom-0 right-0 z-10" style="color:transparent"
+                  src="https://solid.nextjstemplates.com/images/shape/shape-02.svg">
+                <img alt="shape" width="21" height="21" class="absolute -right-6 bottom-0 z-1" style="color:transparent"
+                  src="https://solid.nextjstemplates.com/images/shape/shape-03.svg">
+                <div class="relative aspect-[700/444] w-full">
+                  <img alt="Hero" class="shadow-solid-l"
+                    style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent"
+                    src="https://solid.nextjstemplates.com/images/hero/hero-light.svg">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Brand -->
+      <section class="wow animate__animated animate__fadeInDown animate__slow	2s border border-x-0 border-y-stroke bg-alabaster py-11">
+        <div class="mx-auto max-w-[1390px] px-4 md:px-8 2xl:px-0">
+          <div class="grid grid-cols-3 items-center justify-center gap-7 md:grid-cols-6 lg:gap-[60px] xl:gap-29">
+            <a href="#" class="mx-w-full relative block h-10 w-[98px]" style="opacity: 1; transform: none;">
+              <img alt="Client" class="opacity-65 transition-all duration-300 hover:opacity-100"
+                style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent"
+                src="https://solid.nextjstemplates.com/images/brand/brand-light-01.svg">
+            </a>
+            <a href="#" class="mx-w-full relative block h-10 w-[98px]" style="opacity: 1; transform: none;">
+              <img alt="Client" class="opacity-65 transition-all duration-300 hover:opacity-100"
+                style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent"
+                src="https://solid.nextjstemplates.com/images/brand/brand-light-02.svg">
+            </a>
+            <a href="#" class="mx-w-full relative block h-10 w-[98px]" style="opacity: 1; transform: none;">
+              <img alt="Client" class="opacity-65 transition-all duration-300 hover:opacity-100"
+                style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent"
+                src="https://solid.nextjstemplates.com/images/brand/brand-light-03.svg">
+            </a>
+            <a href="#" class="mx-w-full relative block h-10 w-[98px]" style="opacity: 1; transform: none;">
+              <img alt="Client" class="opacity-65 transition-all duration-300 hover:opacity-100"
+                style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent"
+                src="https://solid.nextjstemplates.com/images/brand/brand-light-02.svg">
+            </a>
+            <a href="#" class="mx-w-full relative block h-10 w-[98px]" style="opacity: 1; transform: none;">
+              <img alt="Client" class="opacity-65 transition-all duration-300 hover:opacity-100"
+                style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent"
+                src="https://solid.nextjstemplates.com/images/brand/brand-light-02.svg">
+            </a>
+            <a href="#" class="mx-w-full relative block h-10 w-[98px]" style="opacity: 1; transform: none;">
+              <img alt="Client" class="opacity-65 transition-all duration-300 hover:opacity-100"
+                style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent"
+                src="https://solid.nextjstemplates.com/images/brand/brand-light-02.svg">
+            </a>
+          </div>
+        </div>
+      </section>
+      <!-- Solid Features -->
+      <section id="features" class="py-20 lg:py-25 xl:py-30">
+        <div class="mx-auto max-w-[1315px] px-4 md:px-8 xl:px-0">
+          <div class="wow animate__animated animate__fadeInDown animate__slow	2s mx-auto text-center" style="opacity: 1; transform: none;">
+            <div class="mb-4 inline-block rounded-full bg-[#edf5ff] px-4 py-2">
+              <span class="text-[14px] leading-6 font-medium text-black">SOLID FEATURES</span>
+            </div>
+            <h2 class="mx-auto mb-4 text-3xl font-bold text-black md:w-4/5 xl:w-1/2 xl:text-[44px] xl:leading-[55px]">
+              Core Features of Solid</h2>
+            <p class="mx-auto md:w-4/5 lg:w-3/5 xl:w-[46%] text-[#877693]">Lorem ipsum dolor sit amet, consectetur
+              adipiscing elit. In
+              convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam
+              ante in maximus.</p>
+          </div>
+          <div class="mt-13 grid grid-cols-1 gap-8 md:grid-cols-2 lg:mt-15 lg:grid-cols-3 xl:mt-20 xl:gap-[60px]">
+            <div class="z-40 rounded-lg border border-white bg-white p-8 shadow-md transition-all hover:shadow-lg xl:p-12"
+              style="opacity: 1; transform: none;">
+              <div class="relative flex h-16 w-16 items-center justify-center rounded-[4px] bg-[#006bff]">
+                <img alt="title" width="36" height="36" style="color:transparent"
+                  src="https://solid.nextjstemplates.com/images/icon/icon-01.svg">
+              </div>
+              <h3 class="mb-5 mt-8 text-xl font-semibold text-black xl:text-[26px] xl:leading-[32px]">Crafted for SaaS
+              </h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.</p>
+            </div>
+            <div class="z-40 rounded-lg border border-white bg-white p-8 shadow-md transition-all hover:shadow-lg xl:p-12"
+              style="opacity: 1; transform: none;">
+              <div class="relative flex h-16 w-16 items-center justify-center rounded-[4px] bg-[#006bff]">
+                <img alt="title" width="36" height="36" style="color:transparent"
+                  src="https://solid.nextjstemplates.com/images/icon/icon-02.svg">
+              </div>
+              <h3 class="mb-5 mt-8 text-xl font-semibold text-black xl:text-[26px] xl:leading-[32px]">High-quality
+                Design
+              </h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.</p>
+            </div>
+            <div class="z-40 rounded-lg border border-white bg-white p-8 shadow-md transition-all hover:shadow-lg xl:p-12"
+              style="opacity: 1; transform: none;">
+              <div class="relative flex h-16 w-16 items-center justify-center rounded-[4px] bg-[#006bff]">
+                <img alt="title" width="36" height="36" style="color:transparent"
+                  src="https://solid.nextjstemplates.com/images/icon/icon-03.svg">
+              </div>
+              <h3 class="mb-5 mt-8 text-xl font-semibold text-black xl:text-[26px] xl:leading-[32px]">Next.js +
+                TypeScript
+              </h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.</p>
+            </div>
+            <div class="z-40 rounded-lg border border-white bg-white p-8 shadow-md transition-all hover:shadow-lg xl:p-12"
+              style="opacity: 1; transform: none;">
+              <div class="relative flex h-16 w-16 items-center justify-center rounded-[4px] bg-[#006bff]">
+                <img alt="title" width="36" height="36" style="color:transparent"
+                  src="https://solid.nextjstemplates.com/images/icon/icon-04.svg">
+              </div>
+              <h3 class="mb-5 mt-8 text-xl font-semibold text-black xl:text-[26px] xl:leading-[32px]">Sanity Blog and
+                Docs
+              </h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.</p>
+            </div>
+            <div class="z-40 rounded-lg border border-white bg-white p-8 shadow-md transition-all hover:shadow-lg xl:p-12"
+              style="opacity: 1; transform: none;">
+              <div class="relative flex h-16 w-16 items-center justify-center rounded-[4px] bg-[#006bff]">
+                <img alt="title" width="36" height="36" style="color:transparent"
+                  src="https://solid.nextjstemplates.com/images/icon/icon-01.svg">
+              </div>
+              <h3 class="mb-5 mt-8 text-xl font-semibold text-black xl:text-[26px] xl:leading-[32px]">DB, Auth and
+                Stripe
+              </h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.</p>
+            </div>
+            <div class="z-40 rounded-lg border border-white bg-white p-8 shadow-md transition-all hover:shadow-lg xl:p-12"
+              style="opacity: 1; transform: none;">
+              <div class="relative flex h-16 w-16 items-center justify-center rounded-[4px] bg-[#006bff]">
+                <img alt="title" width="36" height="36" style="color:transparent"
+                  src="https://solid.nextjstemplates.com/images/icon/icon-01.svg">
+              </div>
+              <h3 class="mb-5 mt-8 text-xl font-semibold text-black xl:text-[26px] xl:leading-[32px]">Regular Free
+                Updates
+              </h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Solution -->
+      <section class="overflow-hidden pb-20 lg:pb-25 xl:pb-30">
+        <div class="mx-auto max-w-[1235px] px-4 md:px-8 xl:px-0">
+          <div class="flex items-center gap-8 lg:gap-32">
+            <div class="wow animate__animated animate__fadeInLeft animate__slow	2s relative mx-auto hidden aspect-[588/526] md:block md:w-1/2" style="opacity: 1; transform: none;">
+              <img alt="About"
+                style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent"
+                sizes="100vw"
+                src="https://solid.nextjstemplates.com/_next/image?url=%2Fimages%2Fabout%2Fabout-light-01.png&w=1920&q=75">
+            </div>
+            <div class="wow animate__animated animate__fadeInRight animate__slow	2s md:w-1/2" style="opacity: 1; transform: none;">
+              <h4 class="font-medium uppercase text-black"><span
+                  class="mb-4 mr-4 inline-flex rounded-full bg-[#20c5a8] px-5 py-1 text-[12px] leading-[24px] uppercase text-white ">New</span>
+                <!-- -->SaaS Boilerplate for Next.js</h4>
+              <h2 class="relative mb-6 text-3xl font-bold text-black xl:text-[44px] xl:leading-[58px]">A Complete Solution
+                for<span
+                  class="relative inline-block before:absolute before:bottom-3 before:left-0 before:-z-[1] before:h-3 before:w-full before:bg-[#adfff8]">SaaS
+                  Startup</span></h2>
+              <p class="text-[#757693]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies lacus non
+                fermentum ultrices. Fusce
+                consectetur le.</p>
+              <div class="mt-8 flex items-center gap-5">
+                <div class="flex h-[55px] w-[55px] items-center justify-center rounded-[50%] border border-stroke">
+                  <p class="text-[20px] leading-[32px] font-semibold text-black">01</p>
+                </div>
+                <div class="w-3/4">
+                  <h3 class="mb-1 text-[20px] leading-[32px] text-black">Mailchimp for Newsletter Emails + SMTP for
+                    Transactional Emails</h3>
+                  <p class="text-[#7576a1]">Ut ultricies lacus non fermentum ultrices.</p>
+                </div>
+              </div>
+              <div class="mt-8 flex items-center gap-5">
+                <div class="flex h-[55px] w-[55px] items-center justify-center rounded-[50%] border border-stroke">
+                  <p class="text-[20px] leading-[32px] font-semibold text-black">02</p>
+                </div>
+                <div class="w-3/4">
+                  <h3 class="mb-0.5 text-[20px] leading-[32px] text-black">Algolia Integration for Site Search</h3>
+                  <p class="text-[#7576a1]">consectetur adipiscing elit fermentum ultricies.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Launch -->
+      <section>
+        <div class="mx-auto max-w-[1235px] overflow-hidden px-4 md:px-8 2xl:px-0">
+          <div class="flex items-center gap-8 lg:gap-32">
+            <div class="wow animate__animated animate__fadeInLeft animate__slow	2s md:w-1/2" style="opacity: 1; transform: none;">
+              <h4 class="font-medium uppercase text-black">Launch Your SaaS Fast</h4>
+              <h2 class="relative mb-6 text-3xl font-bold text-black xl:text-[44px] xl:leading-[58px]">Packed with All
+                Essential
+                <span
+                  class="relative ml-3 inline-block before:absolute before:bottom-2 before:left-0 before:-z-[1] before:h-3 before:w-full before:bg-[#ffeac2]">
+                  Integrations
+                </span>
+              </h2>
+              <p class="text-[#7576a1]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies lacus non
+                fermentum ultrices. Fusce
+                consectetur le.
+              </p>
+              <div>
+                <a href="#" class="group mt-8 inline-flex items-center gap-3 text-black hover:text-[#3389ff]">
+                  <span class="duration-300 group-hover:pr-2">Know More
+                  </span>
+                  <svg width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M10.4766 6.16664L6.00658 1.69664L7.18492 0.518311L13.6666 6.99998L7.18492 13.4816L6.00658 12.3033L10.4766 7.83331H0.333252V6.16664H10.4766Z"
+                      fill="currentColor">
+                    </path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="wow animate__animated animate__fadeInRight animate__slow	2s relative mx-auto hidden aspect-[588/526] md:block md:w-1/2" style="opacity: 1; transform: none;">
+              <img alt="About"
+                style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent"
+                src="https://solid.nextjstemplates.com/images/about/about-light-02.svg">
+            </div>
+          </div>
+      </section>
+      <!-- Features -->
+      <section class="relative pb-20 pt-18 lg:pb-22">
+        <div class="relative mx-auto max-w-[1390px] px-4 md:px-8 2xl:px-0">
+          <div class="absolute -top-16 -z-[1] mx-auto h-[350px] w-[90%]">
+            <img alt="Dotted Shape"
+              style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent"
+              src="https://solid.nextjstemplates.com/images/shape/shape-dotted-light.svg">
+          </div>
+          <div
+            class="wow animate__animated animate__fadeInDown animate__slow 2s mb-[90px] flex flex-wrap justify-center rounded-[10px] border border-stroke bg-white shadow-sm md:flex-nowrap md:items-center lg:gap-8 xl:mb-22 xl:gap-[60px]"
+            style="opacity: 1; transform: none;">
+            <div
+              class="relative flex w-full cursor-pointer items-center gap-4 border-b border-stroke px-6 py-2 last:border-0 md:w-auto md:border-0 xl:px-12 xl:py-5 active before:absolute before:bottom-0 before:left-0 before:h-1 before:w-full before:rounded-tl-[4px] before:rounded-tr-[4px] before:bg-[#3389ff]">
+              <div class="flex h-[55px] w-[55px] items-center justify-center rounded-[50%] border border-stroke ">
+                <p class="text-[18px] leading-[26px] font-medium text-black">01</p>
+              </div>
+              <div class="md:w-3/5 lg:w-auto">
+                <button class="text-sm font-medium text-black xl:text-[16px] xl:leading-[26px]">
+                  Clean User Interface
+                </button>
+              </div>
+            </div>
+            <div
+              class="relative flex w-full cursor-pointer items-center gap-4 border-b border-stroke px-6 py-2 last:border-0 md:w-auto md:border-0 xl:px-12 xl:py-5 ">
+              <div class="flex h-[55px] w-[55px] items-center justify-center rounded-[50%] border border-stroke ">
+                <p class="text-[18px] leading-[26px] font-medium text-black">02</p>
+              </div>
+              <div class="md:w-3/5 lg:w-auto">
+                <button class="text-sm font-medium text-black xl:text-[16px] xl:leading-[26px]">
+                  Essential Business Pages
+                </button>
+              </div>
+            </div>
+            <div
+              class="relative flex w-full cursor-pointer items-center gap-4 border-b border-stroke px-6 py-2 last:border-0 md:w-auto md:border-0 xl:px-12 xl:py-5 ">
+              <div class="flex h-[55px] w-[55px] items-center justify-center rounded-[50%] border border-stroke ">
+                <p class="text-[18px] leading-[26px] font-medium text-black">03</p>
+              </div>
+              <div class="md:w-3/5 lg:w-auto">
+                <button class="text-sm font-medium text-black xl:text-[16px] xl:leading-[26px]">Fully
+                  Functional
+                  Integrations
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class=" mx-auto max-w-[1154px]" style="opacity: 1; transform: none;">
+            <div class="block">
+              <div class="wow animate__animated animate__fadeInDown animate__slow	2s flex items-center gap-8 lg:gap-20">
+                <div class="md:w-1/2">
+                  <h2 class="mb-7 text-3xl font-bold text-black xl:text-[40px] xl:leading-[52px]">Solid UI with Solid
+                    Features.
+                  </h2>
+                  <p class="mb-5 text-[#7576a1]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+                    ultricies lacus non
+                    fermentum ultrices. Fusce consectetur le.</p>
+                  <p class="w-11/12 text-[#7576a1]"> Nam id eleifend dui, id iaculis purus. Etiam lobortis neque
+                    nec finibus sagittis.
+                    Nulla ligula nunc egestas ut.</p>
+                </div>
+                <div class="relative mx-auto hidden aspect-[562/366] max-w-[550px] md:block md:w-1/2">
+                  <img alt="Solid UI with Solid Features."
+                    style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent"
+                    sizes="100vw"
+                    src="https://solid.nextjstemplates.com/_next/image?url=%2Fimages%2Ffeatures%2Ffeatures-light-01.png&w=1920&q=75">
+                </div>
+              </div>
+            </div>
+          </div>
+      </section>
+      <!-- Trusted -->
+      <section class="px-4 py-20 md:px-8 lg:py-22 2xl:px-0">
+        <div
+          class="relative z-[1] mx-auto max-w-[1390px] rounded-lg bg-gradient-to-t from-[#F8F9FF] to-[#DEE7FF] py-22 xl:py-28">
+          <img alt="Man" width="335" height="384" class="absolute -left-15 -top-[100px] -z-[1] lg:left-0"
+            style="color:transparent"
+            src="https://solid.nextjstemplates.com/_next/image?url=%2Fimages%2Fshape%2Fshape-04.png&w=384&q=75">
+          <img alt="Doodle" width="132" height="132" class="absolute bottom-0 right-0 -z-[1]" style="color:transparent"
+            src="https://solid.nextjstemplates.com/_next/image?url=%2Fimages%2Fshape%2Fshape-05.png&w=256&q=75">
+          <img alt="Dotted" decoding="async" data-nimg="fill" class="absolute left-0 top-0 -z-[1] "
+            style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent"
+            src="https://solid.nextjstemplates.com/images/shape/shape-dotted-light-02.svg">
+          <div class="mx-auto mb-12 px-4 text-center md:w-4/5 md:px-0 lg:mb-18 lg:w-2/3 xl:w-1/2"
+            style="opacity: 1; transform: none;">
+            <h2 class="wow animate__animated animate__fadeInDown animate__slow	2s mb-4 text-3xl font-bold text-black xl:text-[44px] leading-[55px]">Trusted by Global
+              Companies.</h2>
+            <p class="wow animate__animated animate__fadeInDown animate__slow	2s mx-auto lg:w-11/12 text-[#7576a1]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
+              convallis tortor
+              eros. Donec vitae tortor lacus. Phasellus aliquam ante in maximus.</p>
+          </div>
+          <div class="flex flex-wrap justify-center gap-8 lg:gap-[170px]">
+            <div class="wow animate__animated animate__fadeInDown animate__slow	2s text-center" style="opacity: 1; transform: none;">
+              <h3 class="mb-3 text-3xl font-bold text-black xl:text-[44px] leading-[55px]">500K</h3>
+              <p class="text-lg lg:text-[22px] lg:leading-[35px]">World Wide Clients</p>
+            </div>
+            <div class="wow animate__animated animate__fadeInDown animate__slow	2s text-center" style="opacity: 1; transform: none;">
+              <h3 class="mb-3 text-3xl font-bold text-black xl:text-[44px] leading-[55px]">1M+</h3>
+              <p class="text-lg lg:text-[22px] lg:leading-[35px]">Downloads</p>
+            </div>
+            <div class="wow animate__animated animate__fadeInDown animate__slow	2s text-center" style="opacity: 1; transform: none;">
+              <h3 class="mb-3 text-3xl font-bold text-black xl:text-[44px] leading-[55px]">865</h3>
+              <p class="text-lg lg:text-[22px] lg:leading-[35px]">Winning Award</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Integration -->
+      <section>
+        <div class="mx-auto max-w-[1390px] px-4 md:px-8 2xl:px-0">
+          <div class="wow animate__animated animate__fadeInDown animate__slow	2s mx-auto text-center" style="opacity: 1; transform: none;">
+            <div class="mb-4 inline-block rounded-full bg-[#edf5ff] px-5 py-2">
+              <span class="text-[14px] leading-[22px] font-medium text-black">INTEGRATIONS</span>
+            </div>
+            <h2 class="mx-auto mb-4 text-3xl font-bold text-black md:w-4/5 xl:w-1/2 xl:text-[44px] leading-[55px]">
+              Packed with all the key integrations you need</h2>
+            <p class="mx-auto md:w-4/5 lg:w-3/5 xl:w-[46%] text-[#7576a1]">Lorem ipsum dolor sit amet, consectetur
+              adipiscing elit. In
+              convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam ante in maximus.</p>
+          </div>
+        </div>
+        <div class="wow animate__animated animate__fadeInDown animate__slow	2s delay 2s relative z-[50] mx-auto mt-14 max-w-[1154px] px-4 md:px-8 xl:mt-20 xl:px-0">
+          <div class="absolute -top-3/4 left-0 right-0 -z-[1] mx-auto h-full w-full">
+            <img alt="Dotted" width="1200" height="400" style="color:transparent;position:static"
+              src="https://solid.nextjstemplates.com/images/shape/shape-dotted-light.svg">
+          </div>
+          <div class="flex flex-wrap justify-around gap-y-10">
+            <div class="w-1/6" style="opacity: 1; transform: none;">
+              <div class="inline-block rounded-[10px] bg-white p-5 shadow-lg">
+                <img alt="Brand" width="50" height="50" style="color:transparent"
+                  src="https://solid.nextjstemplates.com/images/brand/brand-07.svg">
+              </div>
+            </div>
+            <div class="w-1/6" style="opacity: 1; transform: none;"></div>
+            <div class="w-1/6" style="opacity: 1; transform: none;">
+              <div class="inline-block rounded-[10px] bg-white p-5 shadow-lg">
+                <img alt="Brand" width="50" height="50" style="color:transparent"
+                  src="https://solid.nextjstemplates.com/images/brand/brand-08.svg">
+              </div>
+            </div>
+            <div class="w-1/6" style="opacity: 1; transform: none;">
+              <div class="h-[11px] w-[11px] rounded-full bg-[#FFDB26]"></div>
+            </div>
+            <div class="w-1/6" style="opacity: 1; transform: none;">
+              <div class="inline-block rounded-[10px] bg-white p-5 shadow-lg"><img alt="Brand" width="50" height="50"
+                  style="color:transparent" src="https://solid.nextjstemplates.com/images/brand/brand-09.svg">
+              </div>
+            </div>
+            <div class="w-1/6" style="opacity: 1; transform: none;"></div>
+            <div class="w-1/6" style="opacity: 1; transform: none;">
+              <div class="h-[15px] w-[15px] rounded-full bg-[#62E888]"></div>
+            </div>
+            <div class="w-1/6" style="opacity: 1; transform: none;">
+              <div class="inline-block rounded-[10px] bg-white p-5 shadow-lg"><img alt="Brand" width="50" height="50"
+                  style="color:transparent" src="https://solid.nextjstemplates.com/images/brand/brand-10.svg">
+              </div>
+            </div>
+            <div class="w-1/6" style="opacity: 1; transform: none;">
+              <div class="h-[23px] w-[23px] rounded-full bg-[#EF5C00]"></div>
+            </div>
+            <div class="w-1/6" style="opacity: 1; transform: none;">
+              <div class="inline-block rounded-[10px] bg-white p-5 shadow-lg"><img alt="Brand" width="50" height="50"
+                  style="color:transparent" src="https://solid.nextjstemplates.com/images/brand/brand-11.svg">
+              </div>
+            </div>
+            <div class="w-1/6" style="opacity: 1; transform: none;">
+              <div class="h-[15px] w-[15px] rounded-full bg-[#016BFF]"></div>
+            </div>
+            <div class="w-1/6" style="opacity: 1; transform: none;">
+              <div class="inline-block rounded-[10px] bg-white p-5 shadow-lg"><img alt="Brand" width="50" height="50"
+                  style="color:transparent" src="https://solid.nextjstemplates.com/images/brand/brand-12.svg"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  
+    <script src="./lib/wowjs/wow.min.js"></script>
+      <script>
+        new WOW().init();
+      </script>
+  
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.10.3/dist/cdn.min.js" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+
     <!-- Join With Us Today & Increase Your Productivity -->
     <section class="px-4 py-28 overflow-hidden">
       <div
@@ -522,7 +1015,7 @@
     <!-- Find us & Send a message -->
     <section class="px-4 md:px-8 2xl:px-0">
       <div
-        class="relative max-w-w-1390 mx-auto px-30 pt-10 lg:px-30 lg:pt-10 xl:pt-60 xl:px-60"
+        class="relative max-w-w-1390 mx-auto px-30 pt-10 lg:px-30 lg:pt-10 xl:pt-60px xl:px-60px"
       >
         <div
           class="absolute left-0 top-0 w-full h-2/3 rounded-xl -z-10 bg-gradient-to-t from-[#fff] to-[#dee7ff47]"
@@ -536,7 +1029,7 @@
           class="flex flex-wrap flex-col-reverse gap-8 md:flex-row md:flex-nowrap md:justify-between xl:gap-20"
         >
           <div
-            class="wow animate__animated animate_down w-full bg-white rounded-xl p-30 shadow-custom md:w-3/5 lg:w-3/4 xl:p-60"
+            class="wow animate__animated animate_down w-full bg-white rounded-xl p-30 shadow-custom md:w-3/5 lg:w-3/4 xl:p-60px "
           >
             <h2 class="mb-60 text-3xl font-semibold text-black xl_title_2">
               Send a message
@@ -590,8 +1083,8 @@
                   placeholder="Message"
                 ></textarea>
               </div>
-              <div class="flex flex-wrap gap-4 xl:justify-between">
-                <div class="flex mb-4 md:mb-0 max-w-w-425">
+              <div class="flex flex-wrap gap-4 xl:justify-between ">
+                <div class="flex mb-4 md:mb-0 max-w-w-430">
                   <label
                     for="default-checkbox"
                     class="text-18 text-color-text flex gap-2 cursor-pointer"
@@ -633,7 +1126,7 @@
           </div>
 
           <div
-            class="wow animate__animated animate_down w-full md:p-30 md:w-2/5 lg:w-26 xl:pt-60"
+            class="wow animate__animated animate_down w-full md:p-30 lg:w-1/4 md:w-2/5 xl:pt-60px"
           >
             <h2 class="mb-50 text-3xl font-semibold text-black xl_title_2">
               Find us
@@ -1060,5 +1553,6 @@
 
     <script src="./lib/back-to-top/util.js"></script>
     <script src="./lib/back-to-top/main.js"></script>
+    
   </body>
 </html>
